@@ -13,6 +13,8 @@
 #ifndef BT_QUICK_PROF_H
 #define BT_QUICK_PROF_H
 
+#include "../../tracy/public/tracy/Tracy.hpp"
+
 #include "btScalar.h"
 #define USE_BT_CLOCK 1
 
@@ -195,6 +197,7 @@ public:
 	~CProfileSample(void);
 };
 
-#define BT_PROFILE(name) CProfileSample __profile(name)
+// #define BT_PROFILE(name) CProfileSample __profile(name)
+#define BT_PROFILE(name) ZoneScopedNC(name, 0xff8200)
 
 #endif  //BT_QUICK_PROF_H
