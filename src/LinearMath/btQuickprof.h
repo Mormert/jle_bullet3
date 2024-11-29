@@ -13,7 +13,7 @@
 #ifndef BT_QUICK_PROF_H
 #define BT_QUICK_PROF_H
 
-#include "../git_submodules/tracy/public/tracy/Tracy.hpp"
+#include "../../../../../../core/3rdparty/git_submodules/tracy/public/tracy/Tracy.hpp"
 
 #include "btScalar.h"
 #define USE_BT_CLOCK 1
